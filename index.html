@@ -30,6 +30,10 @@
           extend: {
             colors: {
               clifford: "#da373d",
+              DeepBlue: "#111111",
+              grnBtn: "#B4F461",
+              txtGray: "rgba(17, 17, 17, 0.7)",
+              navBg: "rgb(249, 247, 243)",
             },
             fontFamily: {
               lexend: ["Lexend", "sans-serif"],
@@ -40,8 +44,37 @@
     </script>
     <!-- Tailwind Style Ends -->
   </head>
-  <body class="font-lexend">
-    <header></header>
+  <body class="font-lexend relative">
+    <header class="sticky top-0">
+      <nav
+        class="sticky grid grid-rows-2 grid-cols-2 lg:grid-rows-1 lg:grid-cols-3 mx-auto container bg-navBg gap-x-5 gap-y-3 lg:gap-x-24 px-8 py-5 lg:px-32 lg:py-6 lg:justify-between"
+      >
+        <!-- div 1 -->
+        <div class="order-2 lg:order-1">
+          <button
+            class="btn btn-active w-[90px] lg:w-[110px] bg-grnBtn font-semibold text-lg lg:text-xl text-DeepBlue"
+          >
+            Blog
+          </button>
+        </div>
+        <!-- div 2 -->
+        <div
+          class="order-1 col-span-2 lg:order-2 lg:col-span-1 flex justify-center items-center gap-4"
+        >
+          <figure class="w-12 h-12">
+            <img src="assets/logo.png" alt="" />
+          </figure>
+          <p class="font-semibold text-xl text-DeepBlue">Donate Bangladesh</p>
+        </div>
+        <!-- div3 -->
+        <div class="order-3 lg:order-3 flex justify-end items-center gap-3">
+          <figure class="w-7 h-7"><img src="assets/coin.png" alt="" /></figure>
+          <p class="text-txtGray font-medium text-lg lg:text-xl">
+            <span>5500</span> BDT
+          </p>
+        </div>
+      </nav>
+    </header>
     <main></main>
     <footer></footer>
   </body>
