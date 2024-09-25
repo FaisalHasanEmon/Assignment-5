@@ -24,8 +24,9 @@ function validationAndOperation(id, input, main) {
 
     document.getElementById(id).innerText = noakhaliGot;
     document.getElementById(main).innerText = leftMoney;
+    document.getElementById(input).value = "";
   } else {
+    document.getElementById(input).value = "";
     alert("Failed to Donate Money");
   }
-  document.getElementById(id).value = "";
 }
