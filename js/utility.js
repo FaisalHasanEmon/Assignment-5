@@ -26,6 +26,15 @@ function validationAndOperation(id, input, main, name) {
     document.getElementById(main).innerText = leftMoney;
     document.getElementById(input).value = "";
 
+    document.getElementById("taka").innerHTML = "";
+    const div2 = document.createElement("div");
+    div2.innerHTML = `
+     <p class="font-medium text-2xl mt-1">${getInputMoney} BDT</p>
+    `;
+    document.getElementById("taka").appendChild(div2);
+
+    document.getElementById("my_modal_5").showModal();
+
     // Transaction
     const div = document.createElement("div");
     div.innerHTML = `
@@ -44,8 +53,7 @@ function validationAndOperation(id, input, main, name) {
   }
 }
 
-// btn btn-outline w-[136px] font-semibold text-xl text-txtGray
-
+// Shows History and Donation
 function showpage(id) {
   document.getElementById("donation-section").classList.add("hidden");
   document.getElementById("history-section").classList.add("hidden");
