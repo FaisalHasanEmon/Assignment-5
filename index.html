@@ -80,13 +80,15 @@
       class="container mx-auto px-4 lg:px-[190px] space-y-7 lg:space-y-8 my-20"
     >
       <!-- Button -->
-      <div class="w-[309px] gap-x-4 mx-auto">
+      <div class="w-[309px] gap-x-4 mx-auto flex justify-center">
         <button
-          class="btn btn-active w-[157px] bg-grnBtn font-semibold text-xl text-DeepBlue"
+          id="donation"
+          class="btn w-[157px] bg-grnBtn font-semibold text-xl text-DeepBlue"
         >
           Donation
         </button>
         <button
+          id="history"
           class="btn btn-outline w-[136px] font-semibold text-xl text-txtGray"
         >
           History
@@ -236,11 +238,12 @@
       </div>
       <!-- Donation Section Ends -->
       <!-- History Section Starts -->
-      <div id="donation-section"></div>
+      <div id="history-section" class="hidden"></div>
       <!-- History Section Ends -->
     </main>
     <footer></footer>
     <script src="js/utility.js"></script>
+    <script src="js/features.js"></script>
     <script src="js/donateMoney.js"></script>
   </body>
 </html>
