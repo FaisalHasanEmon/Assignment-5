@@ -7,7 +7,7 @@ document
       "noakhali-balance",
       "donate-noakhali",
       "main-balance",
-      "flood relief at Noakhali"
+      " famine-2024 at Noakhali, Bangladesh"
     );
   });
 // Feni
@@ -17,7 +17,7 @@ document.getElementById("btn-feni").addEventListener("click", function (event) {
     "feni-balance",
     "donate-feni",
     "main-balance",
-    "flood relief at Feni"
+    " Flood Relief in Feni,Bangladesh"
   );
 });
 // Quota Movement
@@ -27,6 +27,6 @@ document.getElementById("btn-aid").addEventListener("click", function (event) {
     "aid-balance",
     "donate-aid",
     "main-balance",
-    " in the aid of students"
+    " Aid for Injured in the Quota Movement"
   );
 });

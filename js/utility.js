@@ -59,7 +59,7 @@ function validationAndOperation(id, input, main, name) {
     div.innerHTML = `
           <div class="container mx-auto lg:px-[150px] my-1">
             <div class="w-full border rounded-2xl p-4 lg:p-[32px]">
-            <h1 class="font-bold text-xl text-DeepBlue">${getInputMoney}BDT is donated for ${name} </h1>
+            <h1 class="font-bold text-xl text-DeepBlue">${getInputMoney} Taka is donated for ${name} </h1>
             <p style="color:rgba(17, 17, 17, 0.7)">${time()}<p>
             </div>
           </div>
