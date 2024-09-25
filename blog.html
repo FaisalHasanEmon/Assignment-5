@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate Bangladesh</title>
+
+    <!-- Lexend font from Google CDN Starts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Lexend font from Google CDN Ends -->
+
+    <!-- Tailwind and DaisyUI CDN Starts-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind and DaisyUI CDN Ends-->
+
+    <!-- Tailwind Style Starts -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              DeepBlue: "#111111",
+              grnBtn: "#B4F461",
+              txtGray: "rgba(17, 17, 17, 0.7)",
+              navBg: "rgb(249, 247, 243)",
+              donationBg: "rgba(17, 17, 17, 0.05)",
+            },
+            fontFamily: {
+              lexend: ["Lexend", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Tailwind Style Ends -->
+  </head>
+  <body class="font-lexend relative">
+    <header class="sticky top-0 z-10 backdrop-blur-xl py-1">
+      <nav
+        class="sticky grid grid-rows-2 grid-cols-2 lg:grid-rows-1 lg:grid-cols-3 mx-auto container bg-navBg gap-x-5 gap-y-3 lg:gap-x-24 px-8 py-5 lg:px-32 lg:py-6 lg:justify-between backdrop-blur-xl"
+      >
+        <!-- div 1 -->
+        <div class="order-2 lg:order-1">
+          <a href="index.html"
+            ><button
+              id="home"
+              class="btn btn-active w-[90px] lg:w-[110px] bg-grnBtn font-semibold text-lg lg:text-xl text-DeepBlue"
+            >
+              Home
+            </button></a
+          >
+        </div>
+        <!-- div 2 -->
+        <div
+          class="order-1 col-span-2 lg:order-2 lg:col-span-1 flex justify-center items-center gap-4"
+        >
+          <figure class="w-12 h-12">
+            <img src="assets/logo.png" alt="" />
+          </figure>
+          <p class="font-semibold text-xl text-DeepBlue">Donate Bangladesh</p>
+        </div>
+        <!-- div3 -->
+        <div class="order-3 lg:order-3 flex justify-end items-center gap-3">
+          <figure class="w-7 h-7"><img src="assets/coin.png" alt="" /></figure>
+          <p class="text-txtGray font-medium text-lg lg:text-xl">
+            <span id="main-balance">5500</span> BDT
+          </p>
+        </div>
+      </nav>
+    </header>
+    <main
+      class="container mx-auto px-4 lg:px-[190px] space-y-7 lg:space-y-8 mt-16 mb-20"
+    >
+      <div class="flex justify-start gap-1">
+        <h1 class="font-bold text-4xl">Important FAQ</h1>
+        <figure class="w-8"><img src="assets/question.webp" alt="" /></figure>
+      </div>
+      <div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            What is Document Object Model(DOM)?
+          </div>
+          <div class="collapse-content">
+            <p>
+              The Document Object Model (DOM) is the data representation of the
+              objects that comprise the structure and content of a document on
+              the web.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            How do you select an element from the DOM?
+          </div>
+          <div class="collapse-content">
+            <p>
+              To select an element from the DOM in JavaScript, we can use
+              several methods depending on what we want to select. Here are some
+              common ways:
+            </p>
+            <ol>
+              <li>getElementById</li>
+              <li>getElementsByClassName</li>
+              <li>getElementsByTagName</li>
+              <li>querySelector</li>
+              <li>querySelectorAll</li>
+            </ol>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            What is event delegation in the context of the DOM, and why is it
+            useful?
+          </div>
+          <div class="collapse-content">
+            <p>
+              Event delegation is a technique in JavaScript where instead of
+              adding event listeners to multiple child elements, we can add a
+              single event listener to their parent element. This works because
+              of event bubbling (or propagation), where events triggered on a
+              child element bubble up through the DOM to its ancestors.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            How do you manipulate an element's attributes and styles using the
+            DOM?
+          </div>
+          <div class="collapse-content">
+            <p>
+              We can manipulate an element's attributes and style using DOM in
+              various ways. Some attributes and properties are given below:
+            </p>
+            <ol>
+              <li>
+                getAttribute(): Retrieves the value of a specified attribute.
+              </li>
+              <li>
+                setAttribute(): Sets the value of an attribute.
+                removeAttribute():
+              </li>
+              <li>Removes an attribute from an element.</li>
+
+              <li>add(): Adds a class.</li>
+              <li>remove(): Removes a class.</li>
+              <li>toggle(): Toggles a class on/off.</li>
+              <li>
+                contains(): Checks if an element contains a specific class.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/utility.js"></script>
+    <script src="js/features.js"></script>
+    <script src="js/donateMoney.js"></script>
+  </body>
+</html>

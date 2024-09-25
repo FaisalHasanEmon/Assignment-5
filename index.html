@@ -46,13 +46,14 @@
     <!-- Tailwind Style Ends -->
   </head>
   <body class="font-lexend relative">
-    <header class="sticky top-0">
+    <header class="sticky top-0 z-10 backdrop-blur-xl pb-5">
       <nav
-        class="sticky grid grid-rows-2 grid-cols-2 lg:grid-rows-1 lg:grid-cols-3 mx-auto container bg-navBg gap-x-5 gap-y-3 lg:gap-x-24 px-8 py-5 lg:px-32 lg:py-6 lg:justify-between"
+        class="sticky grid grid-rows-2 grid-cols-2 lg:grid-rows-1 lg:grid-cols-3 mx-auto container bg-navBg gap-x-5 gap-y-3 lg:gap-x-24 px-8 py-5 lg:px-32 lg:py-6 lg:justify-between backdrop-blur-xl"
       >
         <!-- div 1 -->
         <div class="order-2 lg:order-1">
           <button
+            id="blog"
             class="btn btn-active w-[90px] lg:w-[110px] bg-grnBtn font-semibold text-lg lg:text-xl text-DeepBlue"
           >
             Blog
@@ -75,12 +76,8 @@
           </p>
         </div>
       </nav>
-    </header>
-    <main
-      class="container mx-auto px-4 lg:px-[190px] space-y-7 lg:space-y-8 my-20"
-    >
       <!-- Button -->
-      <div class="w-[309px] gap-x-4 mx-auto flex justify-center">
+      <div class="container gap-x-4 mx-auto flex justify-center mt-7 lg:mt-14">
         <button
           id="donation"
           class="btn w-[157px] bg-grnBtn font-semibold text-xl text-DeepBlue"
@@ -94,6 +91,10 @@
           History
         </button>
       </div>
+    </header>
+    <main
+      class="container mx-auto px-4 lg:px-[190px] space-y-7 lg:space-y-8 mt-16 mb-20"
+    >
       <!-- Donation Section Starts -->
       <div id="donation-section" class="space-y-7 lg:space-y-8">
         <!-- Noakhali Starts-->

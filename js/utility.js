@@ -10,13 +10,32 @@ function getInputValue(id) {
   return setMoneyByInput;
 }
 
+function time() {
+  const date = new Date();
+  const dayName = date.toLocaleString("en-US", { weekday: "short" });
+  const monthName = date.toLocaleString("en-US", { month: "short" });
+  const day = date.getDate();
+  const year = date.getFullYear();
+  const time = date.toTimeString().split(" ")[0];
+  const timeZone = date.toTimeString().split(" ")[1];
+  const timeZoneName = Intl.DateTimeFormat("en", { timeZoneName: "long" })
+    .format(date)
+    .split(" ")
+    .slice(1)
+    .join(" ");
+
+  return `Date: ${dayName} ${monthName} ${day} ${year} ${time} ${timeZone} (${timeZoneName})`;
+}
+
+console.log(getFormattedDate());
+
 function validationAndOperation(id, input, main, name) {
   const getNoakhaliBalance = getValueById(id);
   const getMainBalance = getValueById(main);
   const getInputMoney = getInputValue(input);
   if (
     !isNaN(getInputMoney) === true &&
-    getInputMoney >= 0 &&
+    getInputMoney >= 1 &&
     getInputMoney <= getMainBalance
   ) {
     const noakhaliGot = getNoakhaliBalance + getInputMoney;
@@ -38,9 +57,10 @@ function validationAndOperation(id, input, main, name) {
     // Transaction
     const div = document.createElement("div");
     div.innerHTML = `
-          <div class="container mx-auto px-5 lg:px-[150px] my-1">
-            <div class="w-full border rounded-2xl p-[32px]">
+          <div class="container mx-auto lg:px-[150px] my-1">
+            <div class="w-full border rounded-2xl p-4 lg:p-[32px]">
             <h1 class="font-bold text-xl text-DeepBlue">${getInputMoney}BDT is donated for ${name} </h1>
+            <p style="color:rgba(17, 17, 17, 0.7)">${time()}<p>
             </div>
           </div>
     `;
